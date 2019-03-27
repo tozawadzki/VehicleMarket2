@@ -1,17 +1,22 @@
-﻿using System;
+﻿using VehicleMarket2.DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using VehicleMarket2.Models;
 
 namespace VehicleMarket2.Controllers
 {
     public class HomeController : Controller
     {
-        // GET: Home
+        public CarsContext db = new CarsContext();
+
         public ActionResult Index()
         {
-            // Pracujemy nad funkcjonalnością logowania
+            Category category = new Category { CategoryName = "Passaciok", Photo = "passat.jpg", Description = "Best Ever" };
+            db.Categories.Add(category);
+            db.SaveChanges();
             return View();
         }
     }
