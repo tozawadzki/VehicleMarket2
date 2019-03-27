@@ -8,7 +8,7 @@
         public int Amount { get; set; }
         public decimal OrderPrice { get; set; }
 
-        public virtual Car kurs { get; set; }
+        public virtual Car car { get; set; }
         public virtual Order order { get; set; }
     }
 }
