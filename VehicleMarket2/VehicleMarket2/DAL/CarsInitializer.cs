@@ -1,21 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Web;
+using VehicleMarket2.Migrations;
 using VehicleMarket2.Models;
+
 
 namespace VehicleMarket2.DAL
 {
-    public class CarsInitializer : DropCreateDatabaseAlways<CarsContext>
+    public class CarsInitializer : MigrateDatabaseToLatestVersion<CarsContext, Configuration>
     {
-        protected override void Seed(CarsContext context)
-        {
-            SeedCarsData(context);
-            base.Seed(context);
-        }
 
-        private void SeedCarsData(CarsContext context)
+        public static void SeedCarsData(CarsContext context)
         {
             var categories = new List<Category>
             {
@@ -24,7 +22,7 @@ namespace VehicleMarket2.DAL
             new Category() { CategoryID = 3, CategoryName = "Motorcycle", Description = "Mazda RX-8", Photo = "Ninja.jpg" },
             };
 
-            categories.ForEach(c => context.Categories.Add(c));
+            categories.ForEach(c => context.Categories.AddOrUpdate(c));
             context.SaveChanges();
 
             var cars = new List<Car>
@@ -35,7 +33,7 @@ namespace VehicleMarket2.DAL
                 new Car() { CarID=2, CategoryID = 1, Brand = "Maserati", Model = "GranTurismo",  YearOfProduction= "2014", Price = 200000, Supercar = true, Photo = "Maserati.jpg" },
             };
 
-            cars.ForEach(c => context.Cars.Add(c));
+            cars.ForEach(c => context.Cars.AddOrUpdate(c));
             context.SaveChanges();
         }
         }

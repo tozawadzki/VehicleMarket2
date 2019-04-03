@@ -136,6 +136,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904031922162_InitialCreate.cs" />
+    <Compile Include="Migrations\201904031922162_InitialCreate.Designer.cs">
+      <DependentUpon>201904031922162_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904031950313_property Description.cs" />
+    <Compile Include="Migrations\201904031950313_property Description.Designer.cs">
+      <DependentUpon>201904031950313_property Description.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Car.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Order.cs" />
@@ -161,6 +170,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201904031922162_InitialCreate.resx">
+      <DependentUpon>201904031922162_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904031950313_property Description.resx">
+      <DependentUpon>201904031950313_property Description.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

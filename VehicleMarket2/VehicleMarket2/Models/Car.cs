@@ -20,6 +20,7 @@ namespace VehicleMarket2.Models
         public string Photo { get; set; }
         public decimal Price { get; set; }
         public bool Supercar { get; set; }
+        public string Description { get; set; }
 
         public virtual Category Category { get; set; }
     }
