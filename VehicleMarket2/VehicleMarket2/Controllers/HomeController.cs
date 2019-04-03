@@ -14,9 +14,7 @@ namespace VehicleMarket2.Controllers
 
         public ActionResult Index()
         {
-            Category category = new Category { CategoryName = "Passaciok", Photo = "passat.jpg", Description = "Best Ever" };
-            db.Categories.Add(category);
-            db.SaveChanges();
+            var listOfCategories = db.Categories.ToList();
             return View();
         }
     }

@@ -28,8 +28,7 @@ namespace VehicleMarket2.Models
         public DateTime Date { get; set; }
         public OrderStatus OrderStatus { get; set; }
         public decimal Price { get; set; }
-
-        List<OrderPosition> OrderPosition { get; set; }
+    List<OrderPosition> OrderPosition { get; set; }
 
     }
 

@@ -16,8 +16,8 @@ namespace VehicleMarket2.Models
         [Required(ErrorMessage = "Wprowadź model pojazdu")]
         [StringLength(100)]
         public string Model { get; set; }
-        public DateTime DateOfProduction { get; set; }
-        public int Mileage { get; set; }
+        public string YearOfProduction { get; set; }
+        public string Photo { get; set; }
         public decimal Price { get; set; }
         public bool Supercar { get; set; }
 
