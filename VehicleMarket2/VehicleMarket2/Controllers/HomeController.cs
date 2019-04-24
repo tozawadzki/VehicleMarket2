@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using VehicleMarket2.Models;
+using VehicleMarket2.ViewModels;
 
 namespace VehicleMarket2.Controllers
 {
@@ -15,7 +16,20 @@ namespace VehicleMarket2.Controllers
         public ActionResult Index()
         {
             var listOfCategories = db.Categories.ToList();
+
+            var news = db.Cars.Where(a => !a.Hidden).OrderByDescending(a=>a.WhenAdded).Take(3).ToList();
+
+            var supercars = db.Cars.Where(a => !a.Hidden && a.Supercar).OrderBy(a => Guid.NewGuid()).Take(3).ToList();
+
+            var vm = new HomeViewModel(listOfCategories, news, supercars);
+          
+
             return View();
+        }
+
+        public ActionResult StronyStatyczne(string nazwa)
+        {
+            return View(nazwa);
         }
     }
 }

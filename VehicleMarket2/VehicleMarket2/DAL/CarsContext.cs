@@ -19,9 +19,9 @@ namespace VehicleMarket2.DAL
         {
             Database.SetInitializer<CarsContext>(new CarsInitializer());
         }
-        public DbSet<Car> Cars { get; set; }
-        public DbSet<Category> Categories { get; set; }
-        public DbSet<Order> Orders { get; set; }
+        public virtual DbSet<Car> Cars { get; set; }
+        public virtual DbSet<Category> Categories { get; set; }
+        public virtual DbSet<Order> Orders { get; set; }
         public DbSet<OrderPosition> OrderPositions { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
