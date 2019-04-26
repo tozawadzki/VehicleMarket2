@@ -24,7 +24,7 @@ namespace VehicleMarket2.Controllers
             var vm = new HomeViewModel(listOfCategories, news, supercars);
           
 
-            return View();
+            return View(vm);
         }
 
         public ActionResult StronyStatyczne(string nazwa)

@@ -17,9 +17,9 @@ namespace VehicleMarket2.DAL
         {
             var categories = new List<Category>
             {
-                 new Category() { CategoryID=1, CategoryName = "Car", Description= "A5", Photo = "AudiA5.jpg" },
-            new Category() { CategoryID = 2, CategoryName = "Bicycle", Description = "Meridka", Photo = "Merida.jpg" },
-            new Category() { CategoryID = 3, CategoryName = "Motorcycle", Description = "Ninja", Photo = "Ninja.jpg" },
+                new Category() { CategoryID = 1, CategoryName = "Car", Description= "A5", Photo = "AudiA5.jpg" },
+                new Category() { CategoryID = 2, CategoryName = "Bicycle", Description = "Meridka", Photo = "Merida.jpg" },
+                new Category() { CategoryID = 3, CategoryName = "Motorcycle", Description = "Ninja", Photo = "Ninja.jpg" },
             };
 
             

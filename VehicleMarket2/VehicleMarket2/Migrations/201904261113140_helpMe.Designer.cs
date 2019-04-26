@@ -7,13 +7,13 @@ namespace VehicleMarket2.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class probaRatowania : IMigrationMetadata
+    public sealed partial class helpMe : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(probaRatowania));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(helpMe));
         
         string IMigrationMetadata.Id
         {
-            get { return "201904241158424_probaRatowania"; }
+            get { return "201904261113140_helpMe"; }
         }
         
         string IMigrationMetadata.Source

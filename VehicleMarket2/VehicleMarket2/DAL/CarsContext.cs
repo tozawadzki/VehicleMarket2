@@ -19,6 +19,7 @@ namespace VehicleMarket2.DAL
         {
             Database.SetInitializer<CarsContext>(new CarsInitializer());
         }
+
         public virtual DbSet<Car> Cars { get; set; }
         public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Order> Orders { get; set; }

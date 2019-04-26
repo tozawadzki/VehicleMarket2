@@ -49,6 +49,15 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Glimpse.Ado, Version=1.7.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Glimpse.Ado.1.7.3\lib\net45\Glimpse.Ado.dll</HintPath>
+    </Reference>
+    <Reference Include="Glimpse.Core, Version=1.8.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Glimpse.1.8.6\lib\net45\Glimpse.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Glimpse.EF6, Version=1.6.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Glimpse.EF6.1.6.5\lib\net45\Glimpse.EF6.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -132,11 +141,14 @@
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\SwaggerConfig.cs" />
+    <Compile Include="Controllers\CarsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DAL\CarsContext.cs" />
     <Compile Include="DAL\CarsInitializer.cs" />
@@ -151,9 +163,9 @@
     <Compile Include="Migrations\201904031950313_property Description.Designer.cs">
       <DependentUpon>201904031950313_property Description.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201904241158424_probaRatowania.cs" />
-    <Compile Include="Migrations\201904241158424_probaRatowania.Designer.cs">
-      <DependentUpon>201904241158424_probaRatowania.cs</DependentUpon>
+    <Compile Include="Migrations\201904261113140_helpMe.cs" />
+    <Compile Include="Migrations\201904261113140_helpMe.Designer.cs">
+      <DependentUpon>201904261113140_helpMe.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Car.cs" />
@@ -179,6 +191,7 @@
     <Content Include="Views\Home\Regulamin.cshtml" />
     <Content Include="Views\Home\Opinie.cshtml" />
     <Content Include="Views\Home\Pomoc.cshtml" />
+    <Content Include="Views\Cars\List.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -196,8 +209,8 @@
     <EmbeddedResource Include="Migrations\201904031950313_property Description.resx">
       <DependentUpon>201904031950313_property Description.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904241158424_probaRatowania.resx">
-      <DependentUpon>201904241158424_probaRatowania.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201904261113140_helpMe.resx">
+      <DependentUpon>201904261113140_helpMe.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
