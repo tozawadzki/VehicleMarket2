@@ -23,94 +23,45 @@
 
     <section>
         <ul class="KursyTrzyKolumny duzaListaKursy">
-            <li>
-                <article>
-                    <a class="dodajDoKoszykaLink" href="link">
-                        <img src="../Content/Images/koszyk.png" />
-                    </a>
-                    <a class="kursSzczegolyLink" href="link">
-                        <div class="bestsellerFlag"></div>
-                        <img class="kurs" src="../Content/Vehicles/AudiA5.jpg" />
-                        <h1>
-                            Piękne Audi A5
-                        </h1>
-                    </a>
-                </article>
-            </li>
-            <li>
-                <article>
-                    <a class="dodajDoKoszykaLink" href="link">
-                        <img src="../Content/Images/koszyk.png" />
-                    </a>
-                    <a class="kursSzczegolyLink" href="link">
-                        <div class="bestsellerFlag"></div>
-                        <img class="kurs" src="../Content/Vehicles/Passat.jpg" />
-                        <h1>
-                            Passaciok
-                        </h1>
-                    </a>
-                </article>
-            </li>
-            <li>
-                <article>
-                    <a class="dodajDoKoszykaLink" href="link">
-                        <img src="../Content/Images/koszyk.png" />
-                    </a>
-                    <a class="kursSzczegolyLink" href="link">
-                        <div class="bestsellerFlag"></div>
-                        <img class="kurs" src="../Content/Vehicles/Lexus.jpg" />
-                        <h1>
-                            Szpanerski Lexus
-                        </h1>
-                    </a>
-                </article>
-            </li>
+            @foreach (var news in Model.News)
+            {
+                <li>
+                    <article>
+                        <a class="dodajDoKoszykaLink" href="@Url.Action("addToCart", "Cart", new {id=news.CarID})">
+                            <img src="../Content/Images/koszyk.png"/>
+                        </a>
+                        <a class="kursSzczegolyLink" href="@Url.Action("Details", "Cars", new {id=news.CarID})">
+                            <div class="bestsellerFlag"></div>
+                            <!-- Tutaj będzie trzeba napisać helper w Web.config żeby dynamicznie obrazki były -->
+                            <img class="kurs" src="../Content/Vehicles/Passat.jpg"/>
+                            <h1>
+                                @news.Brand @news.Model
+                            </h1>
+                        </a>
+                    </article>
+                </li>
+            }
         </ul>
     </section>
     <section>
         <ul class="KursyTrzyKolumny duzaListaKursy">
-            <li>
-                <article>
-                    <a class="dodajDoKoszykaLink" href="link">
-                        <img src="../Content/Images/koszyk.png" />
-                    </a>
-                    <a class="kursSzczegolyLink" href="link">
-                        <div class="newFlag"></div>
-                        <img class="kurs" src="../Content/Vehicles/Hayabusa.jpg" />
-                        <h1>
-                            Najszybszy motor świata
-                        </h1>
-                    </a>
-                </article>
-            </li>
-            <li>
-                <article>
-                    <a class="dodajDoKoszykaLink" href="link">
-                        <img src="../Content/Images/koszyk.png" />
-                    </a>
-                    <a class="kursSzczegolyLink" href="link">
-                        <div class="newFlag"></div>
-                        <img class="kurs" src="../Content/Vehicles/Aerox.jpg" />
-                        <h1>
-                            Skuter dla kaskaderów
-                        </h1>
-                    </a>
-                </article>
-            </li>
-            <li>
-                <article>
-                    <a class="dodajDoKoszykaLink" href="link">
-                        <img src="../Content/Images/koszyk.png" />
-                    </a>
-                    <a class="kursSzczegolyLink" href="link">
-                        <div class="newFlag"></div>
-                        <img class="kurs" src="../Content/Vehicles/Ninja.jpg" />
-                        <h1>
-                            Ukąśliwy jednoślad
-                        </h1>
-                    </a>
-                </article>
-            </li>
+            @foreach (var supercar in Model.Supercars)
+            {
+                <li>
+                    <article>
+                        <a class="dodajDoKoszykaLink" href="link">
+                            <img src="../Content/Images/koszyk.png"/>
+                        </a>
+                        <a class="kursSzczegolyLink" href="link">
+                            <div class="newFlag"></div>
+                            <img class="kurs" src="../Content/Vehicles/Hayabusa.jpg"/>
+                            <h1>
+                                @supercar.Brand @supercar.Model
+                            </h1>
+                        </a>
+                    </article>
+                </li>
+            }
         </ul>
     </section>
     </body>

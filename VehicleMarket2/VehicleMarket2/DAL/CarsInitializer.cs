@@ -29,10 +29,10 @@ namespace VehicleMarket2.DAL
 
             var cars = new List<Car>
             {
-                new Car() { CarID=1, CategoryID=1, Brand = "Volkswagen", Model= "Passat B5", YearOfProduction= "2001", WhenAdded = DateTime.Now, Price = 8000, Supercar = false, Photo = "Passat.jpg" },
-                new Car() { CarID=2, CategoryID=1, Brand = "Audi", Model= "A5", YearOfProduction= "2011", WhenAdded = DateTime.Now, Price = 40000, Supercar = false, Photo = "AudiA5.jpg" },
-                new Car() { CarID=2, CategoryID = 1, Brand = "Tesla", Model = "Model S",  YearOfProduction= "2017", WhenAdded = DateTime.Now, Price = 150000, Supercar = true, Photo = "Tesla.jpg" },
-                new Car() { CarID=2, CategoryID = 1, Brand = "Maserati", Model = "GranTurismo",  YearOfProduction= "2014",  WhenAdded = DateTime.Now, Price = 200000, Supercar = true, Photo = "Maserati.jpg" },
+                new Car() { CarID=1, CategoryID=1, Brand = "Volkswagen", Model= "Passat B5", YearOfProduction= "2001", WhenAdded = DateTime.Now, Price = 8000, Supercar = false, Photo = "../Content/Vehicles/Passat.jpg" },
+                new Car() { CarID=2, CategoryID=1, Brand = "Audi", Model= "A5", YearOfProduction= "2011", WhenAdded = DateTime.Now, Price = 40000, Supercar = false, Photo = "../Content/Vehicles/AudiA5.jpg" },
+                new Car() { CarID=2, CategoryID = 1, Brand = "Tesla", Model = "Model S",  YearOfProduction= "2017", WhenAdded = DateTime.Now, Price = 150000, Supercar = true, Photo = "../Content/Vehicles/Tesla.jpg" },
+                new Car() { CarID=2, CategoryID = 1, Brand = "Maserati", Model = "GranTurismo",  YearOfProduction= "2014",  WhenAdded = DateTime.Now, Price = 200000, Supercar = true, Photo = "../Content/Vehicles/Maserati.jpg" },
             };
 
             cars.ForEach(c => context.Cars.AddOrUpdate(c));

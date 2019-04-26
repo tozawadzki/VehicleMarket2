@@ -6,20 +6,15 @@ using System.Web.Mvc;
 
 namespace VehicleMarket2.Controllers
 {
-    public class CarsController : Controller
+    public class CartController : Controller
     {
-        // GET: Cars
+       
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult List(string categoryName)
-        {
-            return View();
-        }
-
-        public ActionResult Details(string id)
+        public ActionResult AddToCart(string id)
         {
             return View();
         }
