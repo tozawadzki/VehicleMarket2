@@ -14,6 +14,11 @@ namespace VehicleMarket2
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "CarsList", 
+                url: "Category/{categoryName}",
+                defaults: new {controller = "Cars", action = "List"});
+
+            routes.MapRoute(
                 name: "StronyStatyczne",
                 url: "strona/{nazwa}.html",
                 defaults: new { controller = "Home", action = "StronyStatyczne" });

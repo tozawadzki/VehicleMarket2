@@ -1,0 +1,17 @@
+﻿@model IEnumerable<VehicleMarket2.Models.Category>
+
+d<div id="ListaKategoriZawartosc">
+    <nav class="KategorieVertical">
+        <ul>
+            @foreach(var category in Model)
+            { 
+                <li>
+                    <a href="@Url.Action("List", "Cars", new  {categoryName = category.CategoryName.ToString()})"
+                       style="background-color: crimson">
+                        @category.CategoryName
+                    </a>
+                </li>
+            }
+        </ul>
+    </nav>
+   

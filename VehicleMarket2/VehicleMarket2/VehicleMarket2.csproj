@@ -194,6 +194,8 @@
     <Content Include="Views\Home\Pomoc.cshtml" />
     <Content Include="Views\Cars\List.cshtml" />
     <Content Include="Views\Cart\AddToCart.cshtml" />
+    <Content Include="Views\Cars\_CategoriesMenu.cshtml" />
+    <Content Include="Views\Cars\_CarsList.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

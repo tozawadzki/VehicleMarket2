@@ -1,0 +1,27 @@
+﻿@using VehicleMarket2.DAL
+@model IEnumerable<VehicleMarket2.Models.Car>
+
+<div id="SekcjaListaKategori">
+    <ul class="KursyTrzyKolumny KursCena">
+        @foreach (var car in Model)
+        {
+            <li>
+                <article>
+                    <a class="dodajDoKoszykaLink" href="@Url.Action("AddToCart", "Cart", new {id = car.CarID})">
+                    <img src="@Url.Content("~/Content/Images/koszyk.png")/>
+                    </a>
+                    @if (car.Supercar)
+                    {
+                        <div class ="bestsellerFlag"></div>
+                    }
+                    <a class="kursSzczegolyLink" href="@Url.Action("Details", "Cars", new {id = car.CarID})">
+                        <img class="kurs" src="../Content/Vehicles/Passat.jpg"/>
+                        <h1>
+                            @car.Brand @car.Model
+                        </h1>
+                    </a>
+                </article>
+            </li>
+        }
+    </ul>
+</div>
